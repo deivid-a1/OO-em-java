@@ -3,15 +3,11 @@ public class TipoTrabalho {
 	
 	private String codigoTrabalho;
 	private String caracteristicas;
+	private String periodo;
 	
-	
-	public TipoTrabalho(String dado1, String dado2) { 
-		this.codigoTrabalho = dado1;
-		this.caracteristicas = dado2;
+	public TipoTrabalho() { 
 	}
 
-
-	
 	public String getCodigoTrabalho() {
 		return codigoTrabalho;
 	}
@@ -28,4 +24,11 @@ public class TipoTrabalho {
 		this.caracteristicas = caracteristicas;
 	}
 
+	public String getPeriodo() {
+		return periodo;
+	}
+
+	public void setPeriodo(String periodo) {
+		this.periodo = periodo;
+	}
 }

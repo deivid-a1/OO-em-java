@@ -1,30 +1,52 @@
+import java.util.ArrayList;
 
 public class Operario extends UsuarioFuncionario{
 	
-	private String habilidade;
-	private String periodo;
-	private Dependente dependente1;
-	private Dependente dependente2;
-	private TipoTrabalho tipo1;
-	private TipoTrabalho tipo2;
+	private ArrayList<String> habilidades = new ArrayList<String>();
 	
-	public Operario(String nome, String codigo, String filiacao, String cargaHoraria, String telefone, String endereco,
-			String salario, String departamento, String cpf, String identidade, String sexo, String estadoCivil,
-			String naturalidade, String escolaridade, String cargo, String habilidade, String periodo,
-			Dependente dependente1, Dependente dependente2, TipoTrabalho tipo1) {
-		super(nome, codigo, filiacao, cargaHoraria, telefone, endereco, salario, departamento, cpf, identidade, sexo,
-				estadoCivil, naturalidade, escolaridade, cargo);
-		this.habilidade = habilidade;
-		this.periodo = periodo;
-		this.dependente1 = dependente1;
-		this.dependente2 = dependente2;
+	private TipoTrabalho tipo1;
+	
+	private ArrayList<Dependente> dependentes = new ArrayList<Dependente>();
+	private Dependente dep = new Dependente();
+	
+	public Operario(Dependente dependente1, TipoTrabalho tipo1) {
+		this.dep = dependente1;
 		this.tipo1 = tipo1;
-		this.tipo2 = tipo2;
 	}
-	public String getHabilidade() {
-		return habilidade;
+
+
+	public String getHabilidade(int index) {
+		return habilidades.get(index);
 	}
-	public String getPeriodo() {
-		return periodo;
-	}	
+
+
+	public void setHabilidade(String habilidade) {
+		habilidades.add(habilidade);
+	}
+	public int lenHabilidades() {
+		return habilidades.size();
+	}
+
+	public Dependente getDep(int index) {
+		return dependentes.get(index);
+	}
+	
+	public int lenDep() {
+		return dependentes.size();
+	}
+
+	public void setDep(Dependente dep) {
+		dependentes.add(dep);
+	}
+
+
+	public TipoTrabalho getTipo1() {
+		return tipo1;
+	}
+
+
+	public void setTipo1(TipoTrabalho tipo1) {
+		this.tipo1 = tipo1;
+	}
+	
 }

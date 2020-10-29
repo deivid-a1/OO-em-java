@@ -1,49 +1,34 @@
+import java.util.ArrayList;
 
 public class Gerente extends UsuarioFuncionario {
 	
 	private Projeto nomeProjeto;
-	private Dependente dependente1;
-	private Dependente dependente2;
+	
+	private ArrayList<Dependente> dependentes = new ArrayList<Dependente>();
+	private Dependente dep = new Dependente();
 	
 	
-	public Gerente(String nome, String codigo, String filiacao, String cargaHoraria, String telefone, String endereco,
-			String salario, String departamento, String cpf, String identidade, String sexo, String estadoCivil,
-			String naturalidade, String escolaridade, String cargo, Projeto nomeProjeto, Dependente dependente1,
-			Dependente dependente2) {
-		super(nome, codigo, filiacao, cargaHoraria, telefone, endereco, salario, departamento, cpf, identidade, sexo,
-				estadoCivil, naturalidade, escolaridade, cargo);
+	public Gerente(Projeto nomeProjeto, Dependente dep) {
 		this.nomeProjeto = nomeProjeto;
-		this.dependente1 = dependente1;
-		this.dependente2 = dependente2;
-		
+		this.dep = dep;
 	}
 
 	public Projeto getNomeProjeto() {
 		return nomeProjeto;
+	}
+	
+	public int lenDependente() {
+		return dependentes.size();
 	}
 
 	public void setNomeProjeto(Projeto nomeProjeto) {
 		this.nomeProjeto = nomeProjeto;
 	}
 
-	public Dependente getDependente1() {
-		return dependente1;
+	public Dependente getDep(int index) {
+		return dependentes.get(index);
 	}
-
-	public void setDependente1(Dependente dependente1) {
-		this.dependente1 = dependente1;
+	public void setDep(Dependente dep) {
+		dependentes.add(dep);
 	}
-
-	public Dependente getDependente2() {
-		return dependente2;
-	}
-
-	public void setDependente2(Dependente dependente2) {
-		this.dependente2 = dependente2;
-	}
-
-	
-	
-	
-	
 }

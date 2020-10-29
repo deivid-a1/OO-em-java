@@ -15,24 +15,8 @@ public class UsuarioFuncionario{
 	private String escolaridade;
 	private String cargo;
 	
-	public UsuarioFuncionario(String nome, String codigo, String filiacao, String cargaHoraria, String telefone,
-			String endereco, String salario, String departamento, String cpf, String identidade, String sexo,
-			String estadoCivil, String naturalidade, String escolaridade, String cargo) {
-		this.nome = nome;
-		this.codigo = codigo;
-		this.filiacao = filiacao;
-		this.cargaHoraria = cargaHoraria;
-		this.telefone = telefone;
-		this.endereco = endereco;
-		this.salario = salario;
-		this.departamento = departamento;
-		this.cpf = cpf;
-		this.identidade = identidade;
-		this.sexo = sexo;
-		this.estadoCivil = estadoCivil;
-		this.naturalidade = naturalidade;
-		this.escolaridade = escolaridade;
-		this.cargo = cargo;
+	public UsuarioFuncionario() {
+		ContaObjetos.setContador(1);
 	}
 
 	public String getCpf() {

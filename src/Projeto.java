@@ -10,15 +10,8 @@ public class Projeto {
 	private String produtosEntregues;
 	
 	
-	public Projeto(String titulo, String dataInicio, String dataFim, String funcaoDesenvolvida, String stakeHolders,
-			String historico, String produtosEntregues) {
-		this.titulo = titulo;
-		this.dataInicio = dataInicio;
-		this.dataFim = dataFim;
-		this.funcaoDesenvolvida = funcaoDesenvolvida;
-		this.stakeHolders = stakeHolders;
-		this.historico = historico;
-		this.produtosEntregues = produtosEntregues;
+	public Projeto() {
+		
 	}
 	
 	

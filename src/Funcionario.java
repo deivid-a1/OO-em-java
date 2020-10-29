@@ -6,11 +6,7 @@ public class Funcionario {
 	
 		ControleUsuario a1 = new ControleUsuario();
 		
-		a1.cadastrarGerente();
-		a1.cadastrarGerente();
-		a1.cadastrarGerente();
-	
-		a1.printGerentes();
-	
+		a1.menu();
+		
 	}
 }

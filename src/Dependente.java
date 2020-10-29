@@ -4,10 +4,8 @@ public class Dependente{
 	private String sexoDep;
 	private String dataNasc;
 	
-	public Dependente(String dado1, String dado2, String dado3) {
-		this.nomeDep = dado1;
-		this.sexoDep = dado2;
-		this.dataNasc = dado3;
+	public Dependente() {
+		
 	}
 
 	public String getNomeDep() {
