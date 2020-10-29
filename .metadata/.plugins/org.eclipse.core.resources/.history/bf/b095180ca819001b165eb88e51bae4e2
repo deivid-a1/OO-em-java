@@ -1,0 +1,78 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+
+public class ControleUsuario {
+	
+	ArrayList<Gerente> gerentes = new ArrayList<Gerente>();
+	ArrayList<Operario> operarios = new ArrayList<Operario>();
+	
+
+	public void cadastrarGerente() {
+		
+		System.out.println("Digite os dados do projeto do gerente, respectivamente: o titulo, data de inicio, data do fim, função desenvolvida, stakeholders, histórico, produtos entregues");
+		Projeto pr1 = new Projeto(InputString.stringInput(), InputString.stringInput(), InputString.stringInput(), InputString.stringInput(), InputString.stringInput(), InputString.stringInput(), InputString.stringInput());
+		
+		System.out.println("Digite os dados do dependente, respectivamente: o nome, sexo, data de nascimento");
+		Dependente dep1 = new Dependente(InputString.stringInput(), InputString.stringInput(), InputString.stringInput());
+		
+		System.out.println("Digite os dados do dependente, respectivamente: o nome, sexo, data de nascimento");
+		Dependente dep2 = new Dependente(InputString.stringInput(), InputString.stringInput(), InputString.stringInput());
+		
+		System.out.println("Digite os dados do gerente, respectivamente: nome, codigo, filiação, carga horária, telefone, endereço, salario, departamento, "
+				+ "cpf, identidade, sexo, estado civil, naturalidade, "
+				+ "escolaridade, cargo");
+		Gerente us0 = new Gerente(InputString.stringInput(),InputString.stringInput(),InputString.stringInput(),InputString.stringInput(),InputString.stringInput(),InputString.stringInput(),InputString.stringInput(),InputString.stringInput(),
+				InputString.stringInput(),InputString.stringInput(),InputString.stringInput(),InputString.stringInput(),InputString.stringInput(),InputString.stringInput(),InputString.stringInput(), pr1, dep1, dep2);
+		
+		gerentes.add(us0);
+		
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+		
+		
+	}
+	public void printGerentes() {
+		int i;
+		for (i=0; i < gerentes.size(); i++ ) {
+			System.out.println(gerentes.get(i).getNome());
+		}
+		
+		
+		
+	}
+	public void cadastrarOperario() {
+
+		
+		System.out.println("Digite os dados do dependente 2 do operarios que deseja cadastrar, respectivamente: o nome, sexo, data de nascimento");
+		Dependente dep1 = new Dependente(InputString.stringInput(), InputString.stringInput(), InputString.stringInput());
+		
+		System.out.println("Digite os dados do dependente 2 do operarios que deseja cadastrar, respectivamente: o nome, sexo, data de nascimento");
+		Dependente dep2 = new Dependente(InputString.stringInput(), InputString.stringInput(), InputString.stringInput());
+		
+		System.out.println("Digite os dados dos tipo de trabalho do operario");
+		TipoTrabalho tipo1 = new TipoTrabalho(InputString.stringInput(),InputString.stringInput());
+		
+		
+		System.out.println("Digite os dados do operario, respectivamente: nome, codigo, filiação, carga horária, telefone, endereço, salario, departamento, "
+				+ "cpf, identidade, sexo, estado civil, naturalidade, "
+				+ "escolaridade, cargo, habilidade, periodo");
+		Operario us0 = new Operario(InputString.stringInput(),InputString.stringInput(),InputString.stringInput(),InputString.stringInput(),InputString.stringInput(),InputString.stringInput(),InputString.stringInput(),InputString.stringInput(),
+				InputString.stringInput(),InputString.stringInput(),InputString.stringInput(),InputString.stringInput(),InputString.stringInput(),InputString.stringInput(),InputString.stringInput(), InputString.stringInput(), InputString.stringInput(), dep2, dep2, tipo1);
+		
+		operarios.add(us0);
+		
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+	}
+	
+	public void menu() {
+		
+		
+	}
+	
+	
+		
+}

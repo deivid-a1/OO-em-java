@@ -1,0 +1,32 @@
+
+public class TipoTrabalho {
+	
+	
+
+	private String caracteristicas;
+	private String codigoTrabalho;
+	
+	
+	public TipoTrabalho() {
+	}
+
+	public TipoTrabalho() {
+	}
+
+	public String getCodigoTrabalho() {
+		return codigoTrabalho;
+	}
+
+	public void setCodigoTrabalho(String codigoTrabalho) {
+		this.codigoTrabalho = codigoTrabalho;
+	}
+
+	public String getCaracteristicas() {
+		return caracteristicas;
+	}
+
+	public void setCaracteristicas(String caracteristicas) {
+		this.caracteristicas = caracteristicas;
+	}
+
+}

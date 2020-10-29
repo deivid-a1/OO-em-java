@@ -1,0 +1,29 @@
+
+public class Gerente extends UsuarioFuncionario {
+	
+	private Projeto nomeProjeto;
+	private Dependente dependente1;
+	
+	
+
+
+	public Gerente() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Projeto getNomeProjeto() {
+		return nomeProjeto;
+	}
+
+	public void setNomeProjeto(Projeto nomeProjeto) {
+		this.nomeProjeto = nomeProjeto;
+	}
+
+	public Dependente getDependente1() {
+		return dependente1;
+	}
+
+	public void setDependente1(Dependente dependente1) {
+		this.dependente1 = dependente1;
+	}
+}

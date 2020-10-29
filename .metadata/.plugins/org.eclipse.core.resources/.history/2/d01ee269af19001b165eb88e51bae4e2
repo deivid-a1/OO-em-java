@@ -1,0 +1,147 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+
+public class ControleUsuario {
+	
+	ArrayList<Gerente> gerentes = new ArrayList<Gerente>();
+	ArrayList<Operario> operarios = new ArrayList<Operario>();
+	
+	
+	public void cadastrarGerente() {
+		Gerente us0 = new Gerente();
+		Projeto pr1 = new Projeto();
+		
+		System.out.println("Digite o nome do Gerente para cadastra-lo.");
+		 us0.setNome(InputString.stringInput());
+		
+		 System.out.println("Digite o codigo do/da " + us0.getNome());
+		 us0.setCargo(InputString.stringInput());
+		 
+		 System.out.println("Agora cadastre os dados do projeto que " + us0.getNome() + " é responsavel");
+			 
+			
+			 	System.out.println("Digite o titulo do projeto responsavel por "+ us0.getNome());
+				us0.getNomeProjeto().setTitulo(InputString.stringInput());
+				
+				System.out.println("Digite a função desenvolvida dentro do projeto "+ pr1.getTitulo());
+				us0.getNomeProjeto().setFuncaoDesenvolvida(InputString.stringInput());
+		
+		System.out.println("Agora cadastre os dados do dependente de " + us0.getNome());
+		System.out.println("Digite o nome do dependente de " + us0.getNome());
+		us0.getDependente1().setNomeDep(InputString.stringInput());
+		
+		System.out.println("Digite o sexo de " + us0.getDependente1().getNomeDep());
+		us0.getDependente1().setSexoDep(InputString.stringInput());
+		
+		System.out.println("Digite a data de nascimento de " + us0.getDependente1().getNomeDep());
+		us0.getDependente1().setDataNasc(InputString.stringInput());
+				
+		gerentes.add(us0);
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+		
+	}
+		
+	public void cadastrarOperario() {
+		Dependente dep1 = new Dependente();
+		TipoTrabalho tipo1 = new TipoTrabalho();
+		Operario us0 = new Operario(dep1 , tipo1);
+		
+		System.out.println("Digite o nome do Operario para cadastra-lo.");
+		 us0.setNome(InputString.stringInput());
+		
+		 System.out.println("Digite a habilidade do/da " + us0.getNome());
+		 us0.setHabilidade(InputString.stringInput());
+		 
+		 System.out.println("Digite os dados do tipo de trabalho do operario " + us0.getNome());
+		 System.out.println("Digite o codigo do trabalho exercido por " + us0.getNome());
+		 us0.getTipo1().setCodigoTrabalho(InputString.stringInput());
+		 
+		 System.out.println("Digite a caracteristica do tipo de trabalho de " + us0.getNome());
+		 us0.getTipo1().setCaracteristicas(InputString.stringInput());
+		 
+		 System.out.println("Agora cadastre os dados do dependente de " + us0.getNome());
+			System.out.println("Digite o nome do dependente de " + us0.getNome());
+			us0.getDependente1().setNomeDep(InputString.stringInput());
+			
+			System.out.println("Digite o sexo de " + us0.getDependente1().getNomeDep());
+			us0.getDependente1().setSexoDep(InputString.stringInput());
+		 
+		operarios.add(us0);
+		 
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+	}
+	
+	public void menu() {
+		Scanner input = new Scanner(System.in);
+		boolean exit = false;
+		int variavel;
+		while (exit == false)
+		{
+			System.out.println("Bem vindo a área de relatorios. Digite o que deseja fazer");
+			System.out.println("Digite 1 para o relatorio da quantidade de funcionarios");
+			System.out.println("Digite 2 para o relatorio dos projetos desenvolvidos");
+			System.out.println("Digite 3 para o relatorio das habilidades de cada operário");
+			System.out.println("Digite 4 para a relação dos dependentes de cada funcionário");
+			System.out.println("Digite 5 para a relação do gerente de cada projeto");
+			System.out.println("Digite 6 para cadastrar um gerente");
+			System.out.println("Digite 7 para cadastrar um operario");
+			System.out.println("Digite 0 para sair do programa");
+			variavel = input.nextInt();
+			
+			if (variavel == 1)
+			{
+				System.out.println("A quantidade de funcionários é " + ContaObjetos.getContador());
+			}
+			if (variavel == 2)
+			{
+				for (int i = 0; i < gerentes.size(); i ++) {
+					System.out.println("Projetos desenvolvidos");
+					System.out.println(gerentes.get(i).getNomeProjeto().getTitulo());
+				}
+			}
+			if (variavel == 3) 
+			{
+				for (int i = 0; i < operarios.size(); i ++) {
+					System.out.println("Habilidades de cada funcionario");
+					System.out.println("O operario "+ operarios.get(i).getNome() + " tem a habilidade de "+ operarios.get(i).getHabilidade());
+				}
+ 			}
+			if (variavel == 4) 
+			{
+				for (int i = 0; i < operarios.size(); i ++) {
+					System.out.println("Habilidades de cada funcionario");
+					System.out.println("O operario "+ operarios.get(i).getNome() + " tem a habilidade de "+ operarios.get(i).getHabilidade());
+				}
+			}
+			if (variavel == 5) 
+			{
+				for (int i = 0; i < gerentes.size(); i ++) {
+					System.out.println("Relação de cada projeto com o gerente");
+					System.out.println("O gerente "+ gerentes.get(i).getNome() + " está responsável pelo projeto "+ gerentes.get(i).getNomeProjeto().getTitulo());
+				}
+			}
+			if (variavel == 0) 
+			{
+				exit = true;
+			}
+			
+			if (variavel == 6)
+			{
+				cadastrarGerente();
+			}
+			if (variavel == 7)
+			{
+				cadastrarOperario();
+			}
+		}
+		
+	}
+	
+	
+		
+}

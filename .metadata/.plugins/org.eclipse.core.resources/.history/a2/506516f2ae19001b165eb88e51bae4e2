@@ -1,0 +1,71 @@
+
+public class Operario extends UsuarioFuncionario{
+	
+	private String habilidade;
+	private String periodo;
+	private Dependente dependente1;
+	private TipoTrabalho tipo1;
+	
+	
+	public Operario() {
+	
+	}
+
+
+
+
+
+	public String getHabilidade() {
+		return habilidade;
+	}
+
+
+
+	public void setHabilidade(String habilidade) {
+		this.habilidade = habilidade;
+	}
+
+
+
+	public String getPeriodo() {
+		return periodo;
+	}
+
+
+
+	public void setPeriodo(String periodo) {
+		this.periodo = periodo;
+	}
+
+
+
+	public Dependente getDependente1() {
+		return dependente1;
+	}
+
+
+
+	public void setDependente1(Dependente dependente1) {
+		this.dependente1 = dependente1;
+	}
+
+
+
+	public TipoTrabalho getTipo1() {
+		return tipo1;
+	}
+
+
+
+	public void setTipo1(TipoTrabalho tipo1) {
+		this.tipo1 = tipo1;
+	}
+
+
+
+
+	
+
+
+	
+}
